@@ -1,5 +1,5 @@
 # rom-one-ui-8.5-Samsung-a51-Android-16
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -288,40 +288,45 @@
 </header>
 
 <nav>
-    <button class="tab-btn active" data-target="page-home">🏠 Trang chủ</button>
-    <button class="tab-btn" data-target="page-guide">🛠️ Hướng dẫn cài đặt</button>
+    <a href="#tai-xuong" class="tab-btn">⬇️ Tải xuống</a>
+    <a href="#huong-dan" class="tab-btn">🛠️ Hướng dẫn cài đặt</a>
 </nav>
 
 <div class="container">
 
-    <!-- ============ HOME PAGE ============ -->
-    <section id="page-home" class="page active">
+    <div class="card">
+        <h2>ℹ️ Giới thiệu</h2>
+        <p>
+            Đây là bản ROM port dựa trên nền tảng <b>Android 16</b>, được port từ
+            <b>Samsung Galaxy S23 FE</b> về cho <b>Samsung Galaxy A51 (SM-A515F)</b>. ROM tập trung
+            vào sự ổn định, mượt mà và giữ nguyên các tính năng cốt lõi của Android gốc, phù hợp cho
+            người dùng muốn trải nghiệm phiên bản Android mới nhất trên thiết bị đã hết hỗ trợ cập
+            nhật chính hãng.
+        </p>
+    </div>
 
-        <div class="card">
-            <h2>ℹ️ Giới thiệu</h2>
-            <p>
-                Đây là bản ROM port dựa trên nền tảng <b>Android 16</b>, được build riêng cho
-                <b>Samsung Galaxy A51 (SM-A515F)</b>. ROM tập trung vào sự ổn định, mượt mà và giữ
-                nguyên các tính năng cốt lõi của Android gốc, phù hợp cho người dùng muốn trải nghiệm
-                phiên bản Android mới nhất trên thiết bị đã hết hỗ trợ cập nhật chính hãng.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>🚀 LineageOS 23 — Samsung Galaxy A51 <span class="badge stable">Ổn định</span></h2>
+    <div id="tai-xuong">
+    <div class="card">
+        <h2>🚀 One UI 8.5 — Samsung Galaxy A51 <span class="badge stable">Ổn định</span></h2>
 
             <div class="spec-grid">
                 <div class="spec"><b>Model</b><span>SM-A515F</span></div>
+                <div class="spec"><b>Port từ</b><span>Samsung S23 FE</span></div>
                 <div class="spec"><b>Android</b><span>16</span></div>
                 <div class="spec"><b>Phiên bản</b><span>V1.0</span></div>
-                <div class="spec"><b>Kernel</b><span>Hỗ trợ KernelSU</span></div>
-                <div class="spec"><b>Root mặc định</b><span>Không</span></div>
-                <div class="spec"><b>OTA</b><span>Có hỗ trợ</span></div>
+                <div class="spec"><b>Kernel</b><span>Có sẵn KernelSU</span></div>
+                <div class="spec"><b>Root mặc định</b><span>Không (tự bật khi cần)</span></div>
+                <div class="spec"><b>OTA</b><span>Không hỗ trợ</span></div>
             </div>
 
-            <p>ROM ổn định, hỗ trợ cập nhật OTA, không root mặc định, phù hợp dùng hằng ngày (daily driver).</p>
+            <p>
+                ROM ổn định, <b>không hỗ trợ cập nhật OTA</b> (phải flash thủ công qua TWRP khi có bản mới),
+                phù hợp dùng hằng ngày (daily driver). ROM đã tích hợp sẵn <b>KernelSU</b> — máy không root
+                mặc định, nhưng chỉ cần cập nhật app KernelSU lên bản mới nhất là có thể root máy, và bật
+                quyền Root riêng cho từng ứng dụng theo nhu cầu.
+            </p>
 
-            <a href="LINK_ROM_CỦA_BẠN">
+            <a href="https://pixeldrain.com/u/rjCbtuzu">
                 <button class="dl">⬇️ Tải ROM</button>
             </a>
         </div>
@@ -329,16 +334,16 @@
         <div class="card">
             <h2>🩹 TWRP Recovery <span class="badge stable">Mới nhất</span></h2>
             <p>Bản Recovery mới nhất dành riêng cho A51, dùng để flash ROM, backup và khôi phục dữ liệu.</p>
-            <a href="LINK_TWRP">
+            <a href="https://drive.google.com/file/d/1H-iS1de9sUiQhZObG9VVl26D6gnoQmO6/view">
                 <button class="dl">⬇️ Tải TWRP</button>
             </a>
         </div>
 
         <div class="card">
-            <h2>⚙️ Kernel <span class="badge beta">Beta</span></h2>
-            <p>Kernel tùy chỉnh hỗ trợ KernelSU, cho phép quản lý quyền root linh hoạt theo từng ứng dụng.</p>
-            <a href="LINK_KERNEL">
-                <button class="dl">⬇️ Tải Kernel</button>
+            <h2>🧩 Module</h2>
+            <p>Module bổ sung cho ROM, tải về và cài đặt theo hướng dẫn kèm theo trong link.</p>
+            <a href="https://t.me/icedumbfiles/497">
+                <button class="dl">⬇️ Tải Module</button>
             </a>
         </div>
 
@@ -443,10 +448,6 @@
                 <li>
                     <h3>Flash ROM</h3>
                     <p>Chọn <code>Install</code>, chọn file ROM vừa copy, vuốt để xác nhận flash.</p>
-                </li>
-                <li>
-                    <h3>(Tuỳ chọn) Flash Kernel</h3>
-                    <p>Nếu muốn dùng KernelSU, flash tiếp file Kernel ngay sau ROM, trước khi khởi động lại.</p>
                 </li>
                 <li>
                     <h3>Reboot System</h3>
