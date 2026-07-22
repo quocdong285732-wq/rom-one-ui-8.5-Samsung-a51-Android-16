@@ -1,10 +1,4 @@
 # rom-one-ui-8.5-Samsung-a51-Android-16
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -314,7 +308,7 @@
         </div>
 
         <div class="card">
-            <h2>🚀 One ui 8.5— Samsung Galaxy A51 <span class="badge stable">Ổn định</span></h2>
+            <h2>🚀 LineageOS 23 — Samsung Galaxy A51 <span class="badge stable">Ổn định</span></h2>
 
             <div class="spec-grid">
                 <div class="spec"><b>Model</b><span>SM-A515F</span></div>
@@ -327,7 +321,7 @@
 
             <p>ROM ổn định, hỗ trợ cập nhật OTA, không root mặc định, phù hợp dùng hằng ngày (daily driver).</p>
 
-            <a href="https://pixeldrain.com/u/rjCbtuzu">
+            <a href="LINK_ROM_CỦA_BẠN">
                 <button class="dl">⬇️ Tải ROM</button>
             </a>
         </div>
@@ -335,7 +329,7 @@
         <div class="card">
             <h2>🩹 TWRP Recovery <span class="badge stable">Mới nhất</span></h2>
             <p>Bản Recovery mới nhất dành riêng cho A51, dùng để flash ROM, backup và khôi phục dữ liệu.</p>
-            <a href="https://drive.google.com/file/d/1H-iS1de9sUiQhZObG9VVl26D6gnoQmO6/view">
+            <a href="LINK_TWRP">
                 <button class="dl">⬇️ Tải TWRP</button>
             </a>
         </div>
@@ -343,7 +337,7 @@
         <div class="card">
             <h2>⚙️ Kernel <span class="badge beta">Beta</span></h2>
             <p>Kernel tùy chỉnh hỗ trợ KernelSU, cho phép quản lý quyền root linh hoạt theo từng ứng dụng.</p>
-            <a href="https://t.me/icedumbfiles/497">
+            <a href="LINK_KERNEL">
                 <button class="dl">⬇️ Tải Kernel</button>
             </a>
         </div>
