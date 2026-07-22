@@ -1,5 +1,6 @@
 # rom-one-ui-8.5-Samsung-a51-Android-16
- <!DOCTYPE html>
+ 
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -32,7 +33,6 @@
         min-height:100vh;
     }
 
-    /* ---- top banner ---- */
     .topbar{
         background:var(--panel-alt);
         border-bottom:1px solid var(--line);
@@ -76,7 +76,8 @@
         font-size:15px;
     }
 
-    /* ---- nav tabs ---- */
+    html{scroll-behavior:smooth;}
+
     nav{
         display:flex;
         justify-content:center;
@@ -89,7 +90,7 @@
         z-index:10;
     }
 
-    nav button{
+    nav .tab-btn{
         background:transparent;
         border:1px solid var(--line);
         color:var(--text-dim);
@@ -99,17 +100,13 @@
         font-size:14px;
         font-weight:600;
         transition:.2s;
+        display:inline-block;
     }
 
-    nav button:hover{
+    nav .tab-btn:hover{
         border-color:var(--accent);
         color:var(--accent);
-    }
-
-    nav button.active{
-        background:var(--accent);
-        color:#04222b;
-        border-color:var(--accent);
+        background:rgba(0,195,255,0.08);
     }
 
     .container{
@@ -117,14 +114,6 @@
         max-width:920px;
         margin:auto;
         padding:26px 0 60px;
-    }
-
-    .page{display:none;}
-    .page.active{display:block;animation:fade .35s ease;}
-
-    @keyframes fade{
-        from{opacity:0; transform:translateY(8px);}
-        to{opacity:1; transform:translateY(0);}
     }
 
     .card{
@@ -195,7 +184,6 @@
     .badge.stable{background:rgba(61,220,132,.15); color:var(--ok); border:1px solid rgba(61,220,132,.4);}
     .badge.beta{background:rgba(255,176,32,.15); color:var(--warn); border:1px solid rgba(255,176,32,.4);}
 
-    /* ---- guide page (steps) ---- */
     .steps{
         list-style:none;
         margin:0;
@@ -271,10 +259,6 @@
         border-top:1px solid var(--line);
         font-size:13px;
     }
-
-    @media (prefers-reduced-motion: reduce){
-        .page.active{animation:none;}
-    }
 </style>
 </head>
 <body>
@@ -329,6 +313,10 @@
             <a href="https://pixeldrain.com/u/rjCbtuzu">
                 <button class="dl">⬇️ Tải ROM</button>
             </a>
+            <p style="font-size:13px;color:var(--text-dim);margin-top:10px;">
+                <b>Cách tải:</b> bấm nút trên để mở Pixeldrain → bấm nút <code>Download</code>
+                màu tím ở giữa trang để tải file <code>.zip</code> về máy.
+            </p>
         </div>
 
         <div class="card">
@@ -337,6 +325,10 @@
             <a href="https://drive.google.com/file/d/1H-iS1de9sUiQhZObG9VVl26D6gnoQmO6/view">
                 <button class="dl">⬇️ Tải TWRP</button>
             </a>
+            <p style="font-size:13px;color:var(--text-dim);margin-top:10px;">
+                <b>Cách tải:</b> bấm nút trên để mở Google Drive → bấm biểu tượng
+                <code>⬇️ Tải xuống</code> ở góc trên bên phải trang.
+            </p>
         </div>
 
         <div class="card">
@@ -345,18 +337,19 @@
             <a href="https://t.me/icedumbfiles/497">
                 <button class="dl">⬇️ Tải Module</button>
             </a>
+            <p style="font-size:13px;color:var(--text-dim);margin-top:10px;">
+                <b>Cách tải:</b> bấm nút trên để mở kênh Telegram → nhấn vào file đính kèm trong
+                tin nhắn rồi chọn <code>Tải xuống</code> (cần cài app Telegram nếu mở trên điện thoại).
+            </p>
         </div>
 
         <div class="warn-box">
             <b>⚠️ Lưu ý:</b> Đây là ROM port không chính thức (unofficial). Hãy sao lưu (backup) toàn bộ
             dữ liệu trước khi flash. Người dùng tự chịu trách nhiệm với thiết bị của mình.
         </div>
+    </div>
 
-    </section>
-
-    <!-- ============ GUIDE PAGE ============ -->
-    <section id="page-guide" class="page">
-
+    <div id="huong-dan">
         <div class="card">
             <h2>🛠️ Hướng dẫn cài đặt ROM cho Samsung A51</h2>
             <p>Làm theo đúng thứ tự các bước bên dưới. Không tắt nguồn hoặc rút cáp giữa chừng khi đang flash.</p>
@@ -380,7 +373,7 @@
                 </li>
                 <li>
                     <h3>Tải đầy đủ file cần thiết</h3>
-                    <p>Tải ROM, <code>TWRP Recovery</code>, và Kernel (nếu cần) từ trang chủ ở trên,
+                    <p>Tải ROM, <code>TWRP Recovery</code>, và Module (nếu cần) từ trang chủ ở trên,
                     lưu vào máy tính.</p>
                 </li>
                 <li>
@@ -461,8 +454,7 @@
             <b>💡 Mẹo:</b> Nếu máy bị treo logo quá lâu (trên 10 phút), vào lại TWRP và Wipe Cache/Dalvik
             một lần nữa rồi reboot lại. Nếu vẫn không lên, cần flash lại ROM gốc Samsung qua Odin để khôi phục.
         </div>
-
-    </section>
+    </div>
 
 </div>
 
@@ -470,20 +462,10 @@
     © 2026 Dong ROM · ROM port cộng đồng cho Samsung Galaxy A51 · Không liên kết với Samsung
 </footer>
 
-<script>
-    const buttons = document.querySelectorAll('.tab-btn');
-    const pages = document.querySelectorAll('.page');
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            pages.forEach(p => p.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById(btn.dataset.target).classList.add('active');
-            window.scrollTo({top:0, behavior:'smooth'});
-        });
-    });
-</script>
-
 </body>
 </html>
+    
+        
+    
+
+        
